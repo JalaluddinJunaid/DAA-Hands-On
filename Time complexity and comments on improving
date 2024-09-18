@@ -1,0 +1,23 @@
+Problem 1:
+
+2. Time Complexity:
+•	Let N be the total number of elements across all arrays (N = K * M, where M is the average length of each array).
+•	Initializing the heap takes O(K log K) time.
+•	For each of the N elements, we perform a heap operation (push or pop) which takes O(log K) time.
+•	Therefore, the overall time complexity is O(N log K).
+3. Improvements:
+1.	Reduce Space Complexity: Instead of keeping the full arrays in memory, only store the indices and fetch elements dynamically when needed.
+2.	Multi-threading: If each array is extremely large, merging could be distributed across threads for parallelization.
+3.	Custom Min-Heap: For better performance, you could implement a custom min-heap specifically for this problem, optimizing the comparison and update operations.
+4.	Parallel Processing: If you have access to parallel processing capabilities, you could divide the arrays into smaller chunks and merge them in parallel, potentially improving performance for large datasets.
+
+Problem 2:
+2. Time Complexity:
+•	The algorithm iterates through the array once, performing constant-time operations for each element.
+•	Therefore, the time complexity is O(N), where N is the length of the input array.
+3. Improvements:
+1.	In-place vs. Copy: This approach already uses in-place modification, minimizing space usage. An improvement could be using more aggressive in-place strategies for extremely large arrays.
+2.	Batch Processing: For very large datasets, removing duplicates in parallel across sections of the array and merging the results could further improve performance.
+
+
+
